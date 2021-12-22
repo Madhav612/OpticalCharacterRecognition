@@ -1,4 +1,4 @@
-# Optical Character Recognition
+# Part 3: Optical Character Recognition
 
 ## A description of how you formulated the search problem
 This problem has two subparts: First part where we are asked to implement OCR using bayes algorithm and the second part where we are asked to implement OCR using Viterbi Algorithm. For the bayes, we used only emission probability to calculate the maximum values from all possible outcomes, comparing all 72 outcomes. Though the result was great, it was struggling in some cases where there was too much noise in the image. In the second part we implemented Viterbi Algorithm and we took the max value of Emission, Transition and Initial Probabilities and the results were slighly better as transition probability was allowing the algorithm to pick the most common sequences of letters.
@@ -18,3 +18,4 @@ For the bayes algorithm, we simply calculated the emission probability and retur
 
 ## Problems faced, assumptions, simplifications and design decisions
 The major decision we had to make was optimizing the viterbi algorithm as results we were getting were not good especially when there was a noisy image. Also, the training set we used was `bc.train` and the transition probability was sometimes messing up the result and giving dump values. So we had to make a decision to multiply the value that we get from the transition probability with 0.01 as that would make it significance less and it was surprisingly giving me good results and improving the result that we got from bayes. The same thing was happening with initial probabilities as well as some letter were correctly selected in bayes but in viterbi, it slighly relied on initial probabilities more. Especially for letter such as "T","I",etc. So we had to multiply it with the 0.01 value to make its value less significant. We believe it is because we are using laplace smoothing, it would bring values closer to each other. 
+
