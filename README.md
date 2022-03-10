@@ -1,4 +1,4 @@
-# Part 3: Optical Character Recognition
+Optical Character Recognition
 
 ## A description of how you formulated the search problem
 This problem has two subparts: First part where we are asked to implement OCR using bayes algorithm and the second part where we are asked to implement OCR using Viterbi Algorithm. For the bayes, we used only emission probability to calculate the maximum values from all possible outcomes, comparing all 72 outcomes. Though the result was great, it was struggling in some cases where there was too much noise in the image. In the second part we implemented Viterbi Algorithm and we took the max value of Emission, Transition and Initial Probabilities and the results were slighly better as transition probability was allowing the algorithm to pick the most common sequences of letters.
